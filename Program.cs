@@ -2,6 +2,7 @@
 using HostApi;
 
 var currentDir = Environment.CurrentDirectory;
+Console.WriteLine(currentDir);
 string[] allfiles = Directory.GetFiles(currentDir, "*.*", SearchOption.AllDirectories);
 
 Console.WriteLine(string.Join(":",allfiles));
