@@ -2,8 +2,8 @@
 using HostApi;
 
 var currentDir = Environment.CurrentDirectory;
-string[] allfiles = Directory.GetFiles(currentDir, "*.csproj", SearchOption.AllDirectories);
+string[] allfiles = Directory.GetFiles(currentDir, "*.*", SearchOption.AllDirectories);
 
-Console.WriteLine(allfiles[0]);
+Console.WriteLine(string.Join(":",allfiles));
 
 return new DotNetBuild().Build().ExitCode ?? 1;
