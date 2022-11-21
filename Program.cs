@@ -1,7 +1,8 @@
 ﻿// Run this from the working directory where the solution or project to build is located.
 using HostApi;
 
-string[] allfiles = Directory.GetFiles("BuildApi", "*.csproj", SearchOption.AllDirectories);
+var currentDir = Environment.CurrentDirectory;
+string[] allfiles = Directory.GetFiles(currentDir, "*.csproj", SearchOption.AllDirectories);
 
 Console.WriteLine(allfiles);
 
